@@ -1,0 +1,72 @@
+.price-slider {
+    a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-family: TTLakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 600;
+        flex-basis: 80%;
+        height: 160px;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        
+    }
+    a:not(:last-child) {
+        margin-right: 16px;
+    }
+    a::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: center center no-repeat url(../img/arrow-brand.svg);
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+    &__header{
+        padding: 16px;
+        background-color: #FFFFFF;
+    }
+    &__title {
+        font-family: TTLakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #7E7E82;
+        text-transform: uppercase;
+    }
+    &__swiper {
+        display: flex;
+        flex-direction: column;
+        background-color: #F8F8F8;
+    }
+    &__slide {
+        padding: 16px;
+        background-color: #FFFFFF;
+        margin-bottom: 7px;
+    }
+    &__slide-card {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__slide-sup {
+        font-size: 14px;
+        line-height: 16px;
+        color: #7E7E82;
+        opacity: 0.7;
+        font-weight: 300;
+        margin-bottom: 4px;
+    }
+    &__slide-sub {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,158 @@
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC !important;
+}
+.swiper-pagination-bullet {
+    background-color: #DDDDDD !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+
+
+.btn-more {
+    display: none;
+    position: relative;
+    font-family: TTLakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    border: none;
+    background-color: transparent;
+    margin-left: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.btn-more::before {
+    content: url("../img/btn-more.svg");
+    position: absolute;
+    top: 1px;
+    left: -8px;
+    transform: rotate(0deg);
+}
+.btn-more.open::before {
+    transform: rotate(180deg);
+}
+
+
+.repair-brands__header {
+    padding: 16px;
+    background-color: #FFFFFF;
+}
+
+.repair-brands__title {
+    font-family: TTLakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    text-transform: uppercase;
+}
+
+.repair-brands__wrapper {
+    padding: 16px;
+}
+
+
+.repair-brands__swiper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: visible;
+    transition: z-index 0.5s;
+    border-bottom: 1px solid #D9FFF5;
+    background-color: #F8F8F8;
+}
+.repair-brands__swiper.active {
+    z-index: -1 !important;
+}
+
+.repair-brands__slide {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    margin-bottom: 5px;
+}
+.repair-brands__img {
+    max-height: 32px;
+}
+
+@media screen and (max-width: 767px) {
+    .repair-brands__slide {
+        margin-left: 10px;
+        flex-basis: 70%;
+        padding: 16px;
+    }
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+.arrow-brand {
+    background: no-repeat url("../img/arrow-brand.svg") center center;
+    width: 40px;
+    height: 40px;
+}
+
+
+/*//slider flex-basis*/
+@media screen and (min-width: 425px) {
+    .repair-brands__slide {
+        flex-basis: 60%;
+    }
+}
+@media screen and (min-width: 540px) {
+    .repair-brands__slide {
+        flex-basis: 45%;
+    }
+}
+/*2*/
+@media screen and (min-width: 768px)  {
+
+    .repair-brands__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+    .repair-brands__slide {
+        height: auto;
+        flex-basis: calc(33.3% - 50px);
+        display: none;
+    }
+    .repair-brands__swrapper {
+        display: flex;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    .btn-more {
+        display: block;
+    }
+}
+@media screen and (min-width: 1120px) {
+    .repair-brands__slide {
+        flex-basis: calc(25% - 52px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .repair-brands__wrapper {
+        margin-bottom: 20px !important;
+    }
+
+}
+
+.visible {
+    display: flex;
+}
+

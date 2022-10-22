@@ -1,0 +1,52 @@
+.repair-tech {
+    a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-family: TTLakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 600;
+        flex-basis: 70%;
+        height: 160px;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        
+    }
+    a:not(:last-child) {
+        margin-right: 16px;
+    }
+    a::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: center center no-repeat url(../img/arrow-brand.svg);
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+    &__header{
+        padding: 16px;
+        background-color: #FFFFFF;
+    }
+    &__title {
+        font-family: TTLakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #7E7E82;
+        text-transform: uppercase;
+    }
+    &__swiper {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #D9FFF5;
+        background-color: #F8F8F8;
+    }
+    &__slide {
+        padding: 16px;
+        background-color: #FFFFFF;
+        margin-bottom: 7px;
+    }
+}
