@@ -22,6 +22,7 @@
     margin-left: 40px;
     margin-top: 20px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 .btn-more::before {
     content: url("../img/btn-more.svg");
@@ -34,6 +35,11 @@
     transform: rotate(180deg);
 }
 
+.repair-brands {
+    border-bottom: 1px solid #D9FFF5;
+    background-color: #F8F8F8;
+    padding-bottom: 5px;
+}
 
 .repair-brands__header {
     padding: 16px;
@@ -59,8 +65,7 @@
     flex-wrap: nowrap;
     overflow: visible;
     transition: z-index 0.5s;
-    border-bottom: 1px solid #D9FFF5;
-    background-color: #F8F8F8;
+
 }
 .repair-brands__swiper.active {
     z-index: -1 !important;
@@ -89,7 +94,7 @@
     }
 }
 
-.swiper-pagination {
+.repair-brands_pagination {
     position: absolute;
     bottom: 0;
 }
@@ -129,7 +134,7 @@
         flex-basis: calc(33.3% - 50px);
         display: none;
     }
-    .repair-brands__swrapper {
+    .repair-brands__wrapper {
         display: flex;
         max-width: 1120px;
         margin: 0 auto;

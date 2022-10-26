@@ -5,12 +5,19 @@
         padding: 2px 16px 40px 16px;
         display: flex;
         flex-direction: column;
+
     }
     &__info {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.2px;
         margin-bottom: 10px;
+        @media screen and (min-width: 768px) {
+            width: 60%;
+        }
+        @media screen and (min-width: 1440px) {
+            width: 40%;
+        }
     }
     &__commerce {
         text-decoration: none;
@@ -34,23 +41,37 @@
 .footer {
     background-color: #F8F8F8;
     &__container {
-        flex-direction: column;
-        justify-content: center;
         padding: 16px 0px;
         color: #7E7E82;
         font-size: 14px;
         line-height: 16px;
         text-align: center;
         opacity: 0.7;
-
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 24px;
+        }
     }
     &__author {
+
         margin-bottom: 16px;
+        @media screen and (min-width: 768px) {
+            flex-basis: 33%;
+        }
     }
     &__confidence {
         margin-bottom: 16px;
+        @media screen and (min-width: 768px) {
+            flex-basis: 33%;
+        }
     }
     &__ophet {
         margin-bottom: 16px;
+        @media screen and (min-width: 768px) {
+            flex-basis: 33%;
+        }
     }
 }
+

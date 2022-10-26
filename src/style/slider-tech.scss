@@ -1,4 +1,7 @@
 .repair-tech {
+    position: relative;
+    border-bottom: 1px solid #D9FFF5;
+    background-color: #F8F8F8;
     a {
         position: relative;
         text-decoration: none;
@@ -12,10 +15,32 @@
         height: 160px;
         border: 1px solid #EAEAEA;
         border-radius: 6px;
+        box-sizing: border-box;
+
+        @media screen and (min-width: 425px) {
+            flex-basis: 60%;
+        }
+        @media screen and (min-width: 540px) {
+            flex-basis: 45%;
+
+        }
+        @media screen and (min-width: 768px) {
+            height: 160px;
+            flex-basis: calc(33.3% - 26px);
+            display: none;
+        }
+        @media screen and (min-width: 1120px) {
+            height: 160px;
+            flex-basis: calc(25% - 26px);
+            display: none;
+        }
         
     }
     a:not(:last-child) {
         margin-right: 16px;
+        @media screen and (min-width: 768px) {
+            margin-right: 0px;
+        }
     }
     a::after {
         content: "";
@@ -41,12 +66,33 @@
     &__swiper {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid #D9FFF5;
-        background-color: #F8F8F8;
+
     }
     &__slide {
         padding: 16px;
         background-color: #FFFFFF;
         margin-bottom: 7px;
     }
+    .visible {
+        display: flex;
+    }
+    &_pagination {
+        position: absolute;
+        bottom: 0;
+    }
+    &__wrapper {
+        padding: 16px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+            box-sizing: border-box;
+            margin-bottom: -7px;
+        }
+
+    }
 }
+
+

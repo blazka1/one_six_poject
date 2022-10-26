@@ -1,31 +1,61 @@
 .price-slider {
-    a {
+    position: relative;
+    background-color: #F8F8F8;
+    padding-bottom: 5px;
+
+    // таблица
+    &__table-container {
+        padding: 0 24px;
+        margin-bottom: 24px;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+    &__table-sup {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1.3fr 1.5fr;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+    }
+    &__table-sup-row{
+        height: 1rem;
+        padding: 23px 16px;
+        background-color: #F8F8F8;
+        color: #7E7E82;
+        opacity: 0.7;
+    }
+
+    &__table-item {
         position: relative;
-        text-decoration: none;
-        color: black;
-        font-family: TTLakes;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        font-weight: 600;
-        flex-basis: 80%;
-        height: 160px;
-        border: 1px solid #EAEAEA;
-        border-radius: 6px;
+        display: grid;
+        grid-template-columns: 4fr 1fr 1.3fr 1.5fr;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+    }
+    &__table-item:not(:last-child)::after {
+        bottom: 0;
+        left: 2.5%;
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 95%;
+        background-color: rgba(86, 92, 97, 0.4);;
+    }
+
+    &__table-item-row{
+        height: 1rem;
+        padding: 23px 16px;
+        background-color: #FFFFFF;
+        position: relative;
         
     }
-    a:not(:last-child) {
-        margin-right: 16px;
-    }
-    a::after {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: center center no-repeat url(../img/arrow-brand.svg);
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-    }
+
+// конец таблицы
+
+
     &__header{
         padding: 16px;
         background-color: #FFFFFF;
@@ -42,17 +72,40 @@
         display: flex;
         flex-direction: column;
         background-color: #F8F8F8;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__swiper.active {
+        z-index: -1 !important;
     }
     &__slide {
         padding: 16px;
         background-color: #FFFFFF;
         margin-bottom: 7px;
+        position: relative;
+        color: black;
+        font-family: TTLakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 600;
+        flex-basis: 70%;
+        height: 160px;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+  
+
+    }
+    &__slide:not(:last-child) {
+        margin-right: 16px;
     }
     &__slide-card {
         display: flex;
         flex-direction: column;
-        
+        position: relative;
     }
+
     &__slide-sup {
         font-size: 14px;
         line-height: 16px;
@@ -68,5 +121,73 @@
         color: #1B1C21;
         font-weight: 500;
         margin-bottom: 16px;
+        
+    }
+    &_double-heigh {
+        height: 32px;
+    }
+    &__btn-order {
+        bottom: 16px;
+        right: 0;
+        position: absolute;
+        font-family: TTLakes;
+        box-sizing: border-box;
+        padding: 4px 16px;
+        width: 47%;
+        height: 32px;
+        justify-content: space-around;
+        text-align: start;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        color: #FFFFFF;
+        background-color: #FF3E79;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 16px;
+        i {
+            position: absolute;
+            bottom: 12px;
+            right: 15px;
+            border: solid #FFFFFF;
+            border-width: 0 2px 2px 0;
+            transform: rotate(-45deg);
+
+        }
+        @media screen and (min-width: 425px) {
+            width: 35%;
+        }
+        @media screen and (min-width: 500px) {
+            width: 29%;
+        }
+        @media screen and (min-width: 592px) {
+            width: 25%;
+        }
+    }
+    &__btn-table {
+        font-family: TTLakes;
+        padding: 0px 16px;
+        width: 70%;
+        height: 30px;
+        justify-content: space-around;
+        text-align: start;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        color: #FFFFFF;
+        background-color: #FF3E79;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 16px;
+        transform: translate(0px, -4px);
+        i {
+            position: absolute;
+            bottom: 12px;
+            right: 17px;
+            border: solid #FFFFFF;
+            border-width: 0 2px 2px 0;
+            transform: rotate(-45deg);
+
+        }
     }
 }

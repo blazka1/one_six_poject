@@ -1,0 +1,107 @@
+.feedback.active {
+    transform: translateX(0%);
+}
+.feedback {
+    top: 0;
+    right: 0;
+    position: absolute;
+    transform: translateX(120%);
+    z-index: 10;
+    background-color: #FFF;
+    border: 1px solid rgba(73, 70, 70, 0.2);
+    &__container {
+        position: relative;
+        font-family: TTLakes;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 320px;
+        padding: 104px 16px 126px 16px;
+        @media screen and (min-width:1440px) {
+            width: 440px;
+            padding: 40px 16px 126px 16px;
+        }
+    }
+    .title__text {
+        margin-bottom: 24px;
+    }
+    &__close-btn {
+        background: center center url("../img/burger-close.svg");
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 24px;
+        left: 16px;
+        @media screen and (min-width:1440px) {
+            top: 39px;
+            left: -65px;
+        }
+    }
+    &__close-btn:hover {
+        filter: hue-rotate(180deg);
+        transition: 1s ease all;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        padding: 12px 16px;
+        border: 1px #EAEAEA solid;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin-bottom: 16px;
+    }
+    button {
+        position: relative;
+        width: 30%;
+        align-self: flex-end;
+        font-family: TTLakes;
+        padding: 0px 16px;
+        height: 30px;
+        text-align: start;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        color: #FFFFFF;
+        background-color: #FF3E79;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 16px;
+        i {
+            position: absolute;
+            bottom: 12px;
+            right: 21px;
+            border: solid #FFF;
+            border-width: 0 2px 2px 0;
+            transform: rotate(-45deg);
+        }
+    }
+    
+
+    &__message {
+        font-family: TTLakes !important;
+        padding: 12px 16px;
+        border: 1px #EAEAEA solid;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin-bottom: 16px;
+
+    }
+    &__confidential {
+        font-family: TTLakes;
+        color: #7E7E82;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 16px;
+        span {
+            color: #FF3E79;
+        }
+    }
+
+
+}
