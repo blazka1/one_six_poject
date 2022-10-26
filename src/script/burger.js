@@ -1,4 +1,4 @@
-// import { iconMessageAll } from "./modal-feedback";
+import { modalCall } from "./modal-call";
 
 const menuBtn = document.querySelector('.burger');
 export const menu = document.querySelector('.burger-container');
@@ -29,6 +29,9 @@ if (window.innerWidth < 1440) {
     const iconMessageBurgerMod = document.querySelector('.icon-message_burger-mod');
     iconMessageBurgerMod.addEventListener('click', function() {
     helpLay.classList.toggle('active');
+    // if (modalCall.classList.contains('active')){
+    //     modalCall.classList.remove('active');
+    // }
 })
 
     const iconCallBergerMod = document.querySelector('.icon-call_burger-mod');

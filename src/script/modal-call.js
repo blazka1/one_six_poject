@@ -2,7 +2,7 @@ import {helpLay} from './burger';
 import {menu} from './burger';
 
 export const iconCallAll = document.querySelectorAll('.icon-call');
-const modalCall = document.querySelector('.call');
+export const modalCall = document.querySelector('.call');
 const modalCallClose = document.querySelector('.call__close-btn');
 
 
@@ -21,7 +21,10 @@ modalCallClose.addEventListener('click', function(){
     helpLay.classList.remove('active');
 })
 
-helpLay.addEventListener('click', () => {
-    modalCall.classList.remove('active');
-    helpLay.classList.remove('active');
-})
+if (helpLay !== undefined) {
+    helpLay.addEventListener('click', function(){
+        modalCall.classList.remove('active');
+        helpLay.classList.remove('active');
+    })
+    
+}
