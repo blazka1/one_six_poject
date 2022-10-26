@@ -38,7 +38,9 @@ ul, li {
     filter: hue-rotate(180deg);
     transition: 1s ease all;
 }
-
+.help-container {
+    max-width: 1440px;
+}
 .pointer {
     cursor: pointer;
 }
