@@ -2,26 +2,22 @@ import {helpLay} from './burger';
 import {menu} from './burger';
 
 export const iconMessageAll = document.querySelectorAll('.icon-message');
-const modalFeedback = document.querySelector('.feedback');
+export const modalFeedback = document.querySelector('.feedback');
 const modalFeedbackClose = document.querySelector('.feedback__close-btn');
+const headButtonMessage = document.querySelector('.icon-message_head');
 
 
-iconMessageAll.forEach(e => 
-    e.addEventListener('click', function(){ 
-    modalFeedback.classList.toggle('active');
-    helpLay.classList.toggle('active');
+
+headButtonMessage.addEventListener('click', () => {
+    helpLay.classList.add('active');
+    modalFeedback.classList.add('active');
     modalFeedback.style.transition = "all 0.4s ease";
-    menu.classList.remove('active');
-    }))
-
+})
 
 modalFeedbackClose.addEventListener('click', function(){
-	modalFeedback.classList.toggle('active');
+	modalFeedback.classList.remove('active');
 
     helpLay.classList.remove('active');
 })
 
-helpLay.addEventListener('click', () => {
-    modalFeedback.classList.remove('active');
-    helpLay.classList.remove('active');
-})
+

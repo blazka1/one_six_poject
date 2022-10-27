@@ -1,4 +1,5 @@
 import { modalCall } from "./modal-call";
+import { modalFeedback } from "./modal-feedback";
 
 const menuBtn = document.querySelector('.burger');
 export const menu = document.querySelector('.burger-container');
@@ -13,6 +14,7 @@ menuBtn.addEventListener('click', function(){
     menu.style.transition = "all 0.4s ease";
 
 })
+
 iconBurgerClose.addEventListener('click', function(){
 	menu.classList.toggle('active');
 
@@ -22,22 +24,36 @@ iconBurgerClose.addEventListener('click', function(){
 helpLay.addEventListener('click', () => {
     menu.classList.remove('active');
     helpLay.classList.remove('active');
+    modalCall.classList.remove('active');
+    modalFeedback.classList.remove('active');
 })
 
+const iconMessageBurgerMod = document.querySelector('.icon-message_burger-mod');
+const iconCallBurgerMod = document.querySelector('.icon-call_burger-mod');
 
-if (window.innerWidth < 1440) {
-    const iconMessageBurgerMod = document.querySelector('.icon-message_burger-mod');
-    iconMessageBurgerMod.addEventListener('click', function() {
-    helpLay.classList.toggle('active');
-    // if (modalCall.classList.contains('active')){
-    //     modalCall.classList.remove('active');
-    // }
-})
+iconMessageBurgerMod.addEventListener('click', function() {
+    modalFeedback.classList.add('active')
+    helpLay.classList.add('active')
 
-    const iconCallBergerMod = document.querySelector('.icon-call_burger-mod');
-    iconCallBergerMod.addEventListener('click', function() {
-        helpLay.classList.toggle('active');
-    })
-}
+    if (window.innerWidth < 522) {
+        menu.classList.remove('active');
+    }
 
+    if (modalCall.classList.contains('active')) {
+        modalCall.classList.remove('active')
+    }
+});
+
+iconCallBurgerMod.addEventListener('click', function() {
+    modalCall.classList.add('active')
+    helpLay.classList.add('active')
+
+    if (window.innerWidth < 522) {
+        menu.classList.remove('active');
+    }
+
+    if (modalFeedback.classList.contains('active')) {
+        modalFeedback.classList.remove('active')
+    }
+});
 
