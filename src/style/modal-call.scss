@@ -2,6 +2,7 @@
     transform: translateX(0%);
 }
 .call {
+    box-sizing: border-box !important;
     top: 0;
     right: 0;
     position: absolute;
@@ -56,7 +57,7 @@
     }
     button {
         position: relative;
-        width: 30%;
+        width: 43%;
         align-self: flex-end;
         font-family: TTLakes;
         padding: 0px 16px;
