@@ -32,21 +32,24 @@ const iconMessageBurgerMod = document.querySelector('.icon-message_burger-mod');
 const iconCallBurgerMod = document.querySelector('.icon-call_burger-mod');
 
 iconMessageBurgerMod.addEventListener('click', function() {
-    modalFeedback.classList.add('active')
-    helpLay.classList.add('active')
+    modalFeedback.classList.add('active');
+    helpLay.classList.add('active');
+    modalFeedback.style.transition = "all 0.4s ease";
 
     if (window.innerWidth < 522) {
         menu.classList.remove('active');
     }
 
     if (modalCall.classList.contains('active')) {
-        modalCall.classList.remove('active')
+        modalCall.classList.remove('active');
     }
 });
 
 iconCallBurgerMod.addEventListener('click', function() {
-    modalCall.classList.add('active')
-    helpLay.classList.add('active')
+    modalCall.classList.add('active');
+    helpLay.classList.add('active');
+    modalCall.style.transition = "all 0.4s ease";
+
 
     if (window.innerWidth < 522) {
         menu.classList.remove('active');
