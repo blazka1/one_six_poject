@@ -71,6 +71,9 @@
         border: none;
         text-transform: uppercase;
         border-radius: 16px;
+        @media screen and (min-width:1440px) {
+            width: 30%;
+        }
         i {
             position: absolute;
             bottom: 12px;
