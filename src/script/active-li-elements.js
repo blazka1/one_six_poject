@@ -19,3 +19,14 @@ function swipeLi(e) {
     burgerPanelsLi.forEach(i => i.classList.remove('burger-panel__link_active'));
     e.currentTarget.classList.add('burger-panel__link_active');
 }
+
+const cutTextSelector = document.querySelector('.info__container-about-us-cut-block');
+
+cutTextSelector.style.maxHeight = window.innerWidth > 768 ? '205px' : '125px'
+
+let readMore = document.querySelector('.read-next')
+
+readMore.addEventListener('click', (e) => {
+    cutTextSelector.style.maxHeight = 'fit-content'
+    e.currentTarget.style.display = 'none'
+})

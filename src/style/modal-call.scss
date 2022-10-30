@@ -6,10 +6,12 @@
     top: 0;
     right: 0;
     position: absolute;
+    height: 100%;
     transform: translateX(120%);
     z-index: 10;
     background-color: #FFF;
     border: 1px solid rgba(73, 70, 70, 0.2);
+    box-shadow: 16px 0px 52px 0px #0E185033;
     &__container {
         position: relative;
         font-family: TTLakes;

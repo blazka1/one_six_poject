@@ -8,8 +8,6 @@ const visibleMore = document.querySelector('.btn-more');
 const visibleMore2 = document.querySelector('.btn-more2');
 
 
-
-
 visibleMore.addEventListener('click',  () => {
     for (let i = 0; i < allElementSlider.length; i++) {
         allElementSlider[i].classList.toggle('visible');
@@ -64,6 +62,8 @@ if (window.innerWidth < 768) {
     });
     const swiper3 = new Swiper('.swiper3', {
         direction: 'horizontal',
+        spaceBetween: 15,
+        width: 260,
         pagination: {
             el: '.swiper-pagination3',
             clickable: true
